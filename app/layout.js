@@ -1,7 +1,7 @@
 import { Inter, Mandali } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
