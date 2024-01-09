@@ -105,7 +105,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-4">
-            <Card className="flex-1 shadow-md border-none">
+            <Card className="flex-1 shadow-[0px_2px_6px_0px_rgba(26,24,30,0.04)] border-none">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-base font-normal">
                   Online orders
@@ -117,7 +117,7 @@ export default function Home() {
                 <p className="text-xs opacity-60">+20.1% from last month</p>
               </CardContent>
             </Card>
-            <Card className="flex-1 shadow-md border-none">
+            <Card className="flex-1 shadow-[0px_2px_6px_0px_rgba(26,24,30,0.04)] border-none">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-base font-normal">
                   Amount received
@@ -143,7 +143,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-4">
-            <Card className="flex-1 rounded-lg px-4 shadow-md border-none">
+            <Card className="flex-1 rounded-lg px-4 shadow-[0px_2px_6px_0px_rgba(26,24,30,0.04)] border-none">
               {/* <CardContent> */}
               <DataTableDemo/>
               
