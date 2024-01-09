@@ -102,7 +102,6 @@ export const columns = [
   {
     accessorKey: "orderdate",
     header: ({ column }) => {
-      console.log(column)
       return (
         <Button
           variant="ghost"
@@ -208,7 +207,6 @@ export function DataTableDemo() {
     <div className="w-full">
       <div className="flex items-center py-4">
         <Input
-        onClick={()=>console.log(sorting)}
           placeholder="Filter by order ID..."
           value={table.getColumn("orderid")?.getFilterValue()  ?? ""}
           onChange={(event) =>
