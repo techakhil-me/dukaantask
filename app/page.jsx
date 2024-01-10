@@ -7,6 +7,7 @@ import {
   MessageSquareMore,
   Search,
   Wallet,
+  Menu,
 } from "lucide-react";
 import Image from "next/image";
 import { Input } from "./components/ui/input";
@@ -20,7 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./components/ui/select";
-import { ScrollArea } from "./components/ui/scroll-area";
+import { ScrollArea,ScrollBar } from "./components/ui/scroll-area";
 import {
   Card,
   CardContent,
@@ -33,12 +34,13 @@ import { DataTableDemo } from "./data-table"
 
 
 export default function Home() {
+  
   return (
-    <main className="flex max-h-screen flex-col justify-between">
+    <main className="flex max-h-screen max-w-screen flex-col justify-between">
       {/* top bar */}
 
-      <div className="px-8 py-3 w-full bg-white border-b border-[#D9D9D9] justify-between items-center gap-4 inline-flex">
-        <div className="justify-start items-center gap-4 inline-flex flex-1">
+      <div className="px-2 lg:px-8 py-3 w-full bg-white border-b border-[#D9D9D9] justify-between items-center gap-4 inline-flex">
+        <div className="justify-start items-center gap-4 hidden lg:inline-flex flex-1">
           <div className="text-[#1A181E] text-sm font-normal leading-snug">
             Payments
           </div>
@@ -50,7 +52,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#F2F2F2] rounded-[6px] flex-1 overflow-hidden">
+        <div className="bg-[#F2F2F2] rounded-[6px] flex-1 ml-8 lg:ml-0 overflow-hidden">
           <div className="flex items-center px-4  ">
             <Search className="" color="#808080" size={16} />
             <Input
@@ -80,8 +82,8 @@ export default function Home() {
 
       {/* main content */}
 
-      <ScrollArea className="flex flex-col w-full flex-1">
-        <div className="flex flex-col w-full flex-1 p-8 gap-8">
+      <ScrollArea className="flex flex-col md:w-full flex-1 w-screen overflow-x-hidden">
+        <div className="flex flex-col w-full flex-1 p-2 py-8 lg:p-8 gap-8">
         <div className="flex flex-col gap-8">
           <div className="flex justify-between items-center gap-5">
             <div className="text-[#1A181E] text-xl font-medium leading-7">
@@ -104,8 +106,8 @@ export default function Home() {
             </Select>
           </div>
 
-          <div className="flex gap-4">
-            <Card className="flex-1 shadow-[0px_2px_6px_0px_rgba(26,24,30,0.04)] border-none">
+          <div className="flex flex-1 gap-4 flex-wrap">
+            <Card className="flex-1 min-w-max shadow-[0px_2px_6px_0px_rgba(26,24,30,0.04)] border-none">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-base font-normal">
                   Online orders
@@ -117,7 +119,8 @@ export default function Home() {
                 <p className="text-xs opacity-60">+20.1% from last month</p>
               </CardContent>
             </Card>
-            <Card className="flex-1 shadow-[0px_2px_6px_0px_rgba(26,24,30,0.04)] border-none">
+            
+            <Card className="flex-1 min-w-max shadow-[0px_2px_6px_0px_rgba(26,24,30,0.04)] border-none">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-base font-normal">
                   Amount received
@@ -134,20 +137,19 @@ export default function Home() {
           
         </div>
 
-
-        <div className="flex flex-col gap-8">
+      
+        <div className="flex flex-1 w-full flex-col gap-8">
           <div className="flex justify-between items-center gap-5">
             <div className="text-[#1A181E] text-xl font-medium leading-7">
             Transactions | This Month
             </div>
           </div>
 
-          <div className="flex gap-4">
-            <Card className="flex-1 rounded-lg px-4 shadow-[0px_2px_6px_0px_rgba(26,24,30,0.04)] border-none">
-              {/* <CardContent> */}
-              <DataTableDemo/>
+          <div className="flex flex-1 gap-4 w-full ">
+            <Card className="flex-1 w-full flex flex rounded-lg px-4 shadow-[0px_2px_6px_0px_rgba(26,24,30,0.04)] border-none">
+             
+              <DataTableDemo />
               
-              {/* </CardContent> */}
             </Card>
            
           </div>

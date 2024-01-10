@@ -14,6 +14,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 import { ArrowUpDown, ChevronDown, MoreHorizontal,Download } from "lucide-react"
+import { ScrollArea,ScrollBar } from "./components/ui/scroll-area";
 
 import { Button } from "./components/ui/button"
 import { Checkbox } from "./components/ui/checkbox"
@@ -204,8 +205,8 @@ export function DataTableDemo() {
   })
 
   return (
-    <div className="w-full">
-      <div className="flex items-center py-4">
+    <div className="w-full flex-1 flex-col flex">
+      <div className="flex items-center py-4 gap-4  w-full">
         <Input
           placeholder="Filter by order ID..."
           value={table.getColumn("orderid")?.getFilterValue()  ?? ""}
@@ -247,6 +248,8 @@ export function DataTableDemo() {
 
         </div>
       </div>
+
+      <ScrollArea className="flex-1 w-full sm:w-full sm:max-w-none max-w-xs">
       <div className="rounded-md border">
         <Table>
           <TableHeader className="bg-[#F2F2F2] text-[#4D4D4D]">
@@ -297,6 +300,8 @@ export function DataTableDemo() {
           </TableBody>
         </Table>
       </div>
+      <ScrollBar orientation="horizontal" />
+              </ScrollArea>
       <div className="flex items-center justify-end space-x-2 py-4">
         <div className="flex-1 text-sm text-muted-foreground">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
