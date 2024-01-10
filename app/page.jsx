@@ -129,7 +129,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="text-3xl font-bold">₹23,92,312.19</div>
-                <p className="text-xs opacity-60">+20.1% from last month</p>
+                <p className="text-xs opacity-60">purposely for a brief comparison from the last</p>
               </CardContent>
             </Card>
           </div>
